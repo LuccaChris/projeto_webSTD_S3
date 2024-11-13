@@ -15,20 +15,35 @@
 }
 .content{
     border-radius: 15px;
-    background-color: #fff;
-    width: 80%;
+    background-color: #000000;
+    width: 70%;
     height: 50%;
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
+    position: relative;
+}
+.content::before{
+    content:"";
+    border-radius: 15px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 100%;
 }
 .first-column{
+    z-index: 1;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    flex: 1 0 auto;
+    color: #000000;
 }
 .second-column{
     display: flex;
     flex-direction: column;
+    flex: 2 0 auto;
+    color: #ffffff;
 }
 .list-social-media{
     display: flex;
