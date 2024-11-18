@@ -5,6 +5,9 @@
     box-sizing: border-box;
 
 }
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 
 .container{
     display: flex;
@@ -12,7 +15,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: darkgrey;
+    background-color: rgb(146, 146, 146);
 }
 .content{
     border-radius: 15px;
@@ -31,6 +34,23 @@
     background-color: rgb(255, 255, 255);
     width: 40%;
     height: 100%;
+}
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+
+}
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    height: 30px;
+    right:1000px;
 }
 .first-column{
     z-index: 1;
