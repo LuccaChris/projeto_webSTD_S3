@@ -139,11 +139,15 @@ body{
 }
 .item-social-media:hover{
     background-color: #fff;
-    color: #000;
+    color: #000000;
 }
 .link-social-media{
     color: #fff;
-    
+    padding: 10px;
+}
+.link-social-media:hover{
+    color: #000;
+    padding: 10px;
 }
 .form{
     display: flex;
@@ -181,9 +185,11 @@ input{
 }
 .second-content .first-column{
     order: 2;
+    z-index: -1;
 }
 .second-content .second-column{
     order: 1;
+    z-index: -1;
 }
 .description{
     display: flex;
@@ -195,4 +201,41 @@ input{
 }
 .link-reset::first-letter{
     text-transform: capitalize;
+}
+/* Alternância de Login e Cadastro */
+.sign-in-js .first-content .first-column,
+.sign-in-js .first-content .second-column {
+    z-index: -1;
+}
+
+.sign-in-js .second-content .first-column,
+.sign-in-js .second-content .second-column {
+    z-index: 11;
+}
+
+.sign-in-js .content::before {
+    left: 60%;
+}
+
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .first-content .first-column,
+.sign-up-js .first-content .second-column {
+    z-index: 11;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .label-input {
+        width: 90%;
+    }
 }
