@@ -81,7 +81,7 @@ body{
     margin-top: 1rem;
 }
 .btn-primary{
-    background-color: #fff;
+    background-color: #ffffff00;
     color: #000;
     border: 1px solid #000;
 }
@@ -203,27 +203,50 @@ input{
     text-transform: capitalize;
 }
 /* Alternância de Login e Cadastro */
-.sign-in-js .first-content .first-column,
+
 .sign-in-js .first-content .second-column {
     z-index: -1;
 }
+.sign-in-js .first-content .first-column{
+    z-index: -1;
+}
 
-.sign-in-js .second-content .first-column,
+
 .sign-in-js .second-content .second-column {
     z-index: 11;
+    animation: deslocar 3s;
+    position: relative;
+}
+.sign-in-js .second-content .first-column{
+    z-index: 13;
+    animation: desfoque 2s;
 }
 
 .sign-in-js .content::before {
     left: 60%;
+    animation: slidein 2s;
+    z-index: 12;
+    
+}
+.sign-up-js .content::before{
+    left: 0%;
+    animation: slideout 2s;
+    z-index: 12;
 }
 
 .sign-up-js .second-content .second-column {
     z-index: -1;
 }
 
-.sign-up-js .first-content .first-column,
+
 .sign-up-js .first-content .second-column {
     z-index: 11;
+    
+}
+.sign-up-js .first-content .first-column{
+    z-index: 13;
+    animation: desfoque 3s;
+    
 }
 
 /* Responsividade */
@@ -237,5 +260,58 @@ input{
 
     .label-input {
         width: 90%;
+    }
+}
+
+@keyframes slidein {
+    from{
+        left: 0;
+        width: 50%;
+
+    }
+    75%{
+        left: 0%;
+        width: 100%;
+    
+
+    }
+    to{
+        left:60%;
+        width: 40%;
+        
+    }
+
+}
+@keyframes slideout {
+    from{
+        left: 50%;
+        width: 50%;
+
+    }
+    75%{
+        left: 0%;
+        width: 100%;
+    
+
+    }
+    to{
+        left:0%;
+        width: 40%;
+        
+    }
+
+}
+@keyframes desfoque{
+    from{
+        opacity: 0%;
+
+
+    }
+    55%{
+        opacity: 0%;
+    }
+    to{
+        opacity: 75%;
+
     }
 }
