@@ -3,9 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Dashboard</title>
 </head>
 <body>
-    
+    <div class="containar-main">
+    <div class="container">
+        <!-- Menu lateral -->
+        <div class="menu-lateral">
+            <div class="profile-pic"></div>
+            <nav class="menu">
+                <a href="userregister.html" class="menu-item ">Cadastro de usuários</a>
+                <a href="stock.html" class="menu-item  ">Estoque</a>
+                <a href="salesselect.html" class="menu-item">Venda </a>
+                <a href="dashboard.html" class="menu-item active">Dashboard</a>
+                <a href="index.html" class="menu-item">Sair</a>
+            </nav>
+        </div>
+
+        <!-- Área principal do dashboard -->
+        <div style="padding: 20px;" class="main-content">
+            <!-- Tabela de dados -->
+            <div class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Produto</th>
+                            <th>Quantidade Vendida</th>
+                            <th>Preço de Venda</th>
+                            <th>Custo do Produto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01/01/2024</td>
+                            <td>Produto A</td>
+                            <td>10</td>
+                            <td>R$ 50,00</td>
+                            <td>R$ 30,00</td>
+                        </tr>
+                        <tr>
+                            <td>02/01/2024</td>
+                            <td>Produto B</td>
+                            <td>15</td>
+                            <td>R$ 80,00</td>
+                            <td>R$ 20,00</td>
+                        </tr>
+                        <tr>
+                            <td>03/01/2024</td>
+                            <td>Produto A</td>
+                            <td>20</td>
+                            <td>R$ 90,00</td>
+                            <td>R$ 40,00</td>
+                        </tr>
+                        <tr>
+                            <td>04/01/2024</td>
+                            <td>Produto C</td>
+                            <td>15</td>
+                            <td>R$ 70,00</td>
+                            <td>R$ 50,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Gráficos -->
+            <div class="charts-section">
+                <div class="chart" id="bar-chart"></div>
+                <div class="chart" id="pie-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicionando gráficos com Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Gráfico de barras
+        const barCtx = document.getElementById('bar-chart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Produto A', 'Produto B', 'Produto C'],
+                datasets: [{
+                    label: 'Quantidade Vendida',
+                    data: [30, 15, 15],
+                    backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+
+        // Gráfico de pizza
+        const pieCtx = document.getElementById('pie-chart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Produto A', 'Produto B', 'Produto C'],
+                datasets: [{
+                    data: [50, 30, 20],
+                    backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+                }]
+            },
+            options: {
+                responsive: true,
+            }
+        });
+    </script>
+    </div>
 </body>
 </html>

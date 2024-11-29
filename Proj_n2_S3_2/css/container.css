@@ -184,3 +184,100 @@ input::placeholder {
 .btn:active {
     transform: scale(0.95);
 }
+
+/* sales*/
+
+.actions {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.btn-icon {
+    color: #f0f0f0;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #000;
+    
+}
+
+.btn-icon img {
+    filter: invert(4);
+    width: 30px;
+    height: 30px;
+    
+}
+
+.btn-icon:hover {
+    filter: invert(2);
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+/*add sales */
+.order-summary {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    width: 60%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.order-summary ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.order-summary .order-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* Seção de checkout */
+.checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.checkout .total {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.checkout .btn-icon {
+    width: 50px;
+    height: 50px;
+}
+.add .btn-icon{
+    width: 50px;
+    right: 50px;
+}
+
+/* Botões de ação */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
