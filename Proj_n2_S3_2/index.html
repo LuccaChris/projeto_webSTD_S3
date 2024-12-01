@@ -41,28 +41,28 @@
                         </li>
                     </ul>
                     <p class="description">ou utilize seu email para registro</p>
-                    <form class="form">
+                    <form id="signup-form" class="form">
                         <label class="label-input">
                             <i class="fa-regular fa-user icon-mod"></i>
-                            <input type="text" placeholder="Nome" required>
+                            <input type="text" id="name" placeholder="Nome" required>
                         </label>
-
+                    
                         <label class="label-input">
                             <i class="fa-regular fa-envelope icon-mod"></i>
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" id="email" placeholder="Email" required>
                         </label>
-
+                    
                         <label class="label-input">
                             <i class="fa-solid fa-key icon-mod"></i>
-                            <input type="password" placeholder="Senha" required>
+                            <input type="password" id="password" placeholder="Senha" required>
                         </label>
-
+                    
                         <label class="label-input">
                             <i class="fa-solid fa-key icon-mod"></i>
-                            <input type="password" placeholder="Confirme a senha" required>
+                            <input type="password" id="confirm-password" placeholder="Confirme a senha" required>
                         </label>
-
-                        <button id="signup-btn" class="btn btn-second">Sign up</button>
+                    
+                        <button id="signup-btn" class="btn btn-second" type="submit">Sign up</button>
                     </form>
                 </div>
             </div>
@@ -92,19 +92,19 @@
                         </li>
                     </ul>
                     <p class="description">ou utilize seu email</p>
-                    <form class="form">
+                    <form id="signin-form" class="form">
                         <label class="label-input">
                             <i class="fa-regular fa-envelope icon-mod"></i>
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" id="login-email" placeholder="Email" required>
                         </label>
-
+                    
                         <label class="label-input">
                             <i class="fa-solid fa-key icon-mod"></i>
-                            <input type="password" placeholder="Senha" required>
+                            <input type="password" id="login-password" placeholder="Senha" required>
                         </label>
-
+                    
                         <a class="link-reset" href="#reset">Esqueceu sua senha?</a>
-                        <button id="signin-btn" class="btn btn-second">Sign in</button>
+                        <button id="signin-btn" class="btn btn-second" type="submit">Sign in</button>
                     </form>
                 </div>
             </div>

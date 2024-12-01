@@ -15,3 +15,4 @@ btnSignup.addEventListener("click", function () {
         body.classList.add("sign-up-js");
     }
 });
+
