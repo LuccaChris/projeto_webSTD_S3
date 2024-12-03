@@ -120,4 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert(error.message);
         }
     });
+
+    console.log(`${apiBaseUrl}/${productId}`);
+    
 });
